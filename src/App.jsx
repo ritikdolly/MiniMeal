@@ -1,13 +1,22 @@
 
 import './App.css'
+import { Header } from './components/common/Header';
 
-function App() {
 
+
+// const router= createBrowserRouter([
+
+//   // {path:'/login', element:}
+// ])
+
+const App = () => {
   return (
     <>
-    <h2>Ritik kumar</h2>
+      <Header/>
+      {/* <RouterProvider router={router} /> */}
+      <h1>Ritik Kumar</h1>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
