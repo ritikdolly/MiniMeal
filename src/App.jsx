@@ -1,5 +1,6 @@
 
 import './App.css'
+import { Footer } from './components/common/Footer';
 import { Header } from './components/common/Header';
 
 
@@ -15,6 +16,7 @@ const App = () => {
       <Header/>
       {/* <RouterProvider router={router} /> */}
       <h1>Ritik Kumar</h1>
+      <Footer/>
     </>
   );
 };
