@@ -1,24 +1,21 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Dashboard } from "./components/User/Dashboard";
+import { Layout } from "./Layout/Layout";
+import { Login } from "./components/auth/Login";
 
-import './App.css'
-import { Footer } from './components/common/Footer';
-import { Header } from './components/common/Header';
-
-
-
-// const router= createBrowserRouter([
-
-//   // {path:'/login', element:}
-// ])
+const router = createBrowserRouter([
+  
+  {
+    element: <Layout />,   
+    children: [
+      { path: "/", element: <Dashboard /> },
+      { path: "/dashboard", element: <Dashboard /> },
+    ],
+  },
+]);
 
 const App = () => {
-  return (
-    <>
-      <Header/>
-      {/* <RouterProvider router={router} /> */}
-      <h1>Ritik Kumar</h1>
-      <Footer/>
-    </>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
